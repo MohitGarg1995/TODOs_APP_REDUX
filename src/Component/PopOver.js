@@ -21,7 +21,7 @@ function PopOver() {
             <p>Modal body text goes here.</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="success" onClick={handleClose}>
               Close
             </Button>
             <Button variant="primary" onClick={handleClose}>

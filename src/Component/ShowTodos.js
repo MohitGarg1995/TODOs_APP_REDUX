@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo, updateTodo } from "../Redux/slice/addSlice";
+import { GrEdit } from "react-icons/gr";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 function ShowTodos() {
   // in the below line (state.todosSlice.todos)
@@ -83,7 +85,7 @@ function ShowTodos() {
               <th scope="col" style={{ width: "10%" }}>
                 Sr no.
               </th>
-              <th scope="col" style={{ width: "60%" }}>
+              <th scope="col" style={{ width: "50%" }}>
                 To Do's
               </th>
               <th scope="col" style={{ width: "10%" }}>
@@ -101,10 +103,11 @@ function ShowTodos() {
                 <td>{todo}</td>
                 <td>
                   <button
-                    className="btn btn-dark"
+                    className="btn btn-light"
                     onClick={() => editValue(index, todo)}
                   >
-                    EDIT
+                    <GrEdit />
+                    <span className="ms-2">EDIT</span>
                   </button>
                 </td>
                 <td>
@@ -112,7 +115,8 @@ function ShowTodos() {
                     className="btn btn-dark"
                     onClick={() => handleDeleteClick(index)}
                   >
-                    DELETE
+                    <RiDeleteBin5Line />
+                    <span className="ps-0"> DELETE</span>
                   </button>
                 </td>
               </tr>

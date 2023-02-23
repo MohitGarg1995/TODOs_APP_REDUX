@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../Redux/slice/addSlice";
-
+// import { GrAdd } from "react-icons/gr";
+import AddIcon from "@mui/icons-material/Add";
 // import { reduxDataCheck } from "../Redux/reducers/auth";
 
 function AddTodo() {
@@ -32,12 +33,14 @@ function AddTodo() {
             onChange={(e) => setTodo(e.target.value)}
           />
           <button
-            class="btn btn-dark ms-4"
+            class="btn btn-light ms-4"
             type="submit"
             // onClick={() => console.log("Added item")}
             onClick={createTodo}
+            style={{ width: "100px" }}
           >
-            ADD
+            <AddIcon />
+            {/* <GrAdd /> */}
           </button>
         </div>
       </div>
